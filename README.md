@@ -17,10 +17,11 @@ It Supports LTR/RTL directions.
     }
 
     dependencies {
-            compile 'com.github.Mojtaba-Shafaei:AndroidUserName:1.0.0'
+            compile 'com.github.Mojtaba-Shafaei:AndroidUserName:[lastVersion]'
     }
 
 
+find last version with below link
 
 [![](https://jitpack.io/v/Mojtaba-Shafaei/AndroidUserName.svg)](https://jitpack.io/#Mojtaba-Shafaei/AndroidUserName)
 
