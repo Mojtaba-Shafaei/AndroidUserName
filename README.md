@@ -22,7 +22,7 @@ It Supports LTR/RTL directions.
 
 
 
-[![](https://jitpack.io/v/Mojtaba-Shafaei/AndroidUserName.svg)](https://jitpack.io/#Mojtaba-Shafaei/AndroidBottomDialog)
+[![](https://jitpack.io/v/Mojtaba-Shafaei/AndroidUserName.svg)](https://jitpack.io/#Mojtaba-Shafaei/AndroidUserName)
 
 ### **Screenshots**
 
