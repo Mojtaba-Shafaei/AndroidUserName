@@ -29,6 +29,7 @@ It Supports LTR/RTL directions.
 ![LTR menu](images/Untitled.png)
 
 ### **Sample code**
+```xml
     <com.mojtaba_shafaei.android.NameEmail
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -39,7 +40,7 @@ It Supports LTR/RTL directions.
         app:layoutDirection="rtl"
         app:name="Mojtaba Shafaei"
         app:nameTextColor="@android:color/primary_text_light_nodisable" />
-
+```
 <!-- ## **Sample App**
 [Download sample app from my drive](https://drive.google.com/file/d/0B7U-LJJvftlSZC1qRDcxeVV3N3M/view?usp=sharing) -->
 
