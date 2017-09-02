@@ -10,6 +10,8 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode rootProject.ext.versionCode
         versionName rootProject.ext.versionName
+
+        multiDexEnabled true
     }
     buildTypes {
         release {
@@ -22,5 +24,6 @@ android {
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation "com.android.support:appcompat-v7:$rootProject.ext.buildToolsVersion"
+    implementation 'com.android.support:multidex:1.0.2'
     implementation project(':mylibrary')
 }

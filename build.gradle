@@ -32,6 +32,6 @@ ext {
     minSdkVersion = 14 as Integer
     targetSdkVersion = 26 as Integer
 
-    versionCode = 4 as Integer
-    versionName = "1.0.3" as String
+    versionCode = 5 as Integer
+    versionName = "1.0.4" as String
 }
