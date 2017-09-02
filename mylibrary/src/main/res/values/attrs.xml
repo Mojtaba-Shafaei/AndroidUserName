@@ -9,10 +9,6 @@
         <attr name="email" format="string" />
         <attr name="emailTextColor" format="color" />
 
-        <attr name="layoutDirection" format="integer">
-            <enum name="ltr" value="0" />
-            <enum name="rtl" value="1" />
-        </attr>
         <attr name="arrow" format="reference" />
     </declare-styleable>
 </resources>

@@ -65,7 +65,7 @@ public class NameEmail extends RelativeLayout {
                 R.styleable.NameEmail,
                 0, 0);
 
-        inflate(context, a.getInt(R.styleable.NameEmail_layoutDirection, LTR) == LTR ? R.layout.ltr : R.layout.rtl, this);
+        inflate(context, R.layout.ltr, this);
         ViewGroup root = findViewById(R.id.nameEmail_root);
         name = findViewById(R.id.textView_name);
         email = findViewById(R.id.textView_email);
