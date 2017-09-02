@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.graphics.Typeface;
+import android.os.Handler;
 import android.support.annotation.ColorInt;
 import android.support.annotation.ColorRes;
 import android.support.annotation.DrawableRes;
@@ -26,7 +27,6 @@ import java.lang.annotation.RetentionPolicy;
 
 public class NameEmail extends RelativeLayout {
     private final String TAG = "NameEmail";
-    private ViewGroup root;
     private TextView name, email;
     private ImageView arrowDownUp;
 
@@ -72,7 +72,7 @@ public class NameEmail extends RelativeLayout {
                 0, 0);
 
         inflate(context, a.getInt(R.styleable.NameEmail_layoutDirection, LTR) == LTR ? R.layout.ltr : R.layout.rtl, this);
-        root = findViewById(R.id.nameEmail_root);
+        ViewGroup root = findViewById(R.id.nameEmail_root);
         name = findViewById(R.id.textView_name);
         email = findViewById(R.id.textView_email);
         arrowDownUp = findViewById(R.id.btnExpandUserInfo);
@@ -113,12 +113,11 @@ public class NameEmail extends RelativeLayout {
             root.setOnClickListener(new OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    toggleArrowImage();
-
                     view.setId(getId());
                     if (onClickListener != null) {
                         onClickListener.onClick(view);
                     }
+                    toggleArrowImage();
                 }
             });
         } catch (Exception e) {
@@ -167,7 +166,12 @@ public class NameEmail extends RelativeLayout {
         from = (from + 180) % 360;
         to = (to + 180) % 360;
 
-        arrowDownUp.startAnimation(animation);
+        new Handler(getContext().getApplicationContext().getMainLooper()).postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                arrowDownUp.startAnimation(animation);
+            }
+        }, 100);
     }
 
 
