@@ -1,11 +1,11 @@
 package com.mojtaba_shafaei.android.userName;
 
+import android.animation.ValueAnimator;
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.graphics.Typeface;
-import android.os.Handler;
 import android.support.annotation.ColorInt;
 import android.support.annotation.ColorRes;
 import android.support.annotation.DrawableRes;
@@ -15,8 +15,6 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
-import android.view.animation.RotateAnimation;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -30,11 +28,7 @@ public class NameEmail extends RelativeLayout {
     private TextView name, email;
     private ImageView arrowDownUp;
 
-    private boolean status = true;
-
-
     private OnClickListener onClickListener;
-    private int from = 0, to = 180;
     public final static int LTR = 0;
     public final static int RTL = 1;
 
@@ -154,24 +148,23 @@ public class NameEmail extends RelativeLayout {
 
 
     public void toggleArrowImage() {
-        status = !status;
-
-        final RotateAnimation animation = new RotateAnimation(from, to,
-                Animation.RELATIVE_TO_SELF, .5f,
-                Animation.RELATIVE_TO_SELF, .5f);
-        animation.setFillEnabled(true);
-        animation.setFillAfter(true);
-        animation.setDuration(300);
-
-        from = (from + 180) % 360;
-        to = (to + 180) % 360;
-
-        new Handler(getContext().getApplicationContext().getMainLooper()).postDelayed(new Runnable() {
+        ValueAnimator valueAnimator = ValueAnimator.ofFloat(arrowDownUp.getRotation(), arrowDownUp.getRotation() + 180);
+        valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
-            public void run() {
-                arrowDownUp.startAnimation(animation);
+            public void onAnimationUpdate(final ValueAnimator valueAnimator) {
+                arrowDownUp.setRotation((Float) valueAnimator.getAnimatedValue());
+                /*new Handler(getContext().getApplicationContext().getMainLooper()).postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+
+                    }
+
+                }, 0);*/
+
             }
-        }, 100);
+        });
+        valueAnimator.setDuration(300);
+        valueAnimator.start();
     }
 
 
