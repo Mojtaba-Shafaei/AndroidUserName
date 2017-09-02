@@ -5,7 +5,6 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.graphics.Typeface;
-import android.os.Handler;
 import android.support.annotation.ColorInt;
 import android.support.annotation.ColorRes;
 import android.support.annotation.DrawableRes;
@@ -20,8 +19,6 @@ import android.view.animation.RotateAnimation;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-
-import com.mojtaba_shafaei.android.userName.R;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;
@@ -170,13 +167,7 @@ public class NameEmail extends RelativeLayout {
         from = (from + 180) % 360;
         to = (to + 180) % 360;
 
-        new Handler().postAtFrontOfQueue(new Runnable() {
-            @Override
-            public void run() {
-                arrowDownUp.startAnimation(animation);
-            }
-        });
-
+        arrowDownUp.startAnimation(animation);
     }
 
 

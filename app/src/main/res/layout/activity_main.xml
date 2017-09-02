@@ -11,6 +11,7 @@
     android:paddingTop="16dp">
 
     <com.mojtaba_shafaei.android.userName.NameEmail
+        android:id="@+id/name0"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/bg_name_mail"
@@ -19,6 +20,7 @@
         app:name="Mojtaba Shafaei" />
 
     <com.mojtaba_shafaei.android.userName.NameEmail
+        android:id="@+id/name1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
