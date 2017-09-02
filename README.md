@@ -3,10 +3,10 @@ An Android library to display name and email together specially in Drawer.
 It Supports LTR/RTL directions.
 
 ## **Version**
-1.0.0
+1.0.2
 ### **Requirements**
 
-- MIN-SDK Version = 15
+- MIN-SDK Version = 14
 
 ### **Install**
     allprojects {
