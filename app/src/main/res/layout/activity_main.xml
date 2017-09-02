@@ -10,7 +10,7 @@
     android:paddingRight="16dp"
     android:paddingTop="16dp">
 
-    <com.mojtaba_shafaei.android.NameEmail
+    <com.mojtaba_shafaei.android.userName.NameEmail
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/bg_name_mail"
@@ -18,7 +18,7 @@
         app:layoutDirection="ltr"
         app:name="Mojtaba Shafaei" />
 
-    <com.mojtaba_shafaei.android.NameEmail
+    <com.mojtaba_shafaei.android.userName.NameEmail
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -28,7 +28,7 @@
         app:layoutDirection="ltr"
         app:name="Mojtaba Shafaei" />
 
-    <com.mojtaba_shafaei.android.NameEmail
+    <com.mojtaba_shafaei.android.userName.NameEmail
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
