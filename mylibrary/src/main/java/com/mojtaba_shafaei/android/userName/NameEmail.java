@@ -25,12 +25,15 @@ import java.lang.annotation.RetentionPolicy;
 
 public class NameEmail extends RelativeLayout {
     private final String TAG = "NameEmail";
+    private ViewGroup root;
     private TextView name, email;
     private ImageView arrowDownUp;
 
     private OnClickListener onClickListener;
     public final static int LTR = 0;
     public final static int RTL = 1;
+
+    private int rotation = 0;
 
     @IntDef({LTR, RTL})
     @Retention(RetentionPolicy.SOURCE)
@@ -66,7 +69,7 @@ public class NameEmail extends RelativeLayout {
                 0, 0);
 
         inflate(context, R.layout.ltr, this);
-        ViewGroup root = findViewById(R.id.nameEmail_root);
+        root = findViewById(R.id.nameEmail_root);
         name = findViewById(R.id.textView_name);
         email = findViewById(R.id.textView_email);
         arrowDownUp = findViewById(R.id.btnExpandUserInfo);
@@ -148,19 +151,12 @@ public class NameEmail extends RelativeLayout {
 
 
     public void toggleArrowImage() {
-        ValueAnimator valueAnimator = ValueAnimator.ofFloat(arrowDownUp.getRotation(), arrowDownUp.getRotation() + 180);
+        rotation += 180;
+        ValueAnimator valueAnimator = ValueAnimator.ofFloat(arrowDownUp.getRotation(), rotation);
         valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
             public void onAnimationUpdate(final ValueAnimator valueAnimator) {
                 arrowDownUp.setRotation((Float) valueAnimator.getAnimatedValue());
-                /*new Handler(getContext().getApplicationContext().getMainLooper()).postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-
-                    }
-
-                }, 0);*/
-
             }
         });
         valueAnimator.setDuration(300);
@@ -171,4 +167,11 @@ public class NameEmail extends RelativeLayout {
     public void setOnClickListener(final OnClickListener l) {
         this.onClickListener = l;
     }
+
+    @Override
+    public void setClickable(boolean clickable) {
+        root.setClickable(clickable);
+    }
+
+
 }
