@@ -171,6 +171,7 @@ public class NameEmail extends RelativeLayout {
     @Override
     public void setClickable(boolean clickable) {
         root.setClickable(clickable);
+        arrowDownUp.setVisibility(!clickable ? GONE : VISIBLE);
     }
 
 
