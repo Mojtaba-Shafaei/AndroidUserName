@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <declare-styleable name="NameEmail">
-        <attr name="android:background" />
+  <declare-styleable name="NameEmail">
+    <attr name="android:background"/>
 
-        <attr name="name" format="string" />
-        <attr name="nameTextColor" format="color" />
+    <attr format="string" name="name"/>
+    <attr format="color" name="nameTextColor"/>
 
-        <attr name="email" format="string" />
-        <attr name="emailTextColor" format="color" />
+    <attr format="string" name="email"/>
+    <attr format="color" name="emailTextColor"/>
 
-        <attr name="arrow" format="reference" />
-    </declare-styleable>
+    <attr format="reference" name="arrow"/>
+    <attr format="integer" name="name_layout_direction">
+      <enum name="ltr" value="0"/>
+      <enum name="rtl" value="1"/>
+    </attr>
+  </declare-styleable>
 </resources>

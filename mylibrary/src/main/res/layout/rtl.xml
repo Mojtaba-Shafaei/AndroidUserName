@@ -6,13 +6,14 @@
   android:paddingTop="4dp"
   android:paddingBottom="4dp"
   android:descendantFocusability="blocksDescendants"
-  android:minHeight="48dp">
+  android:minHeight="48dp"
+  android:orientation="horizontal">
 
   <android.support.v7.widget.AppCompatImageView
     android:id="@+id/btnExpandUserInfo"
     android:layout_width="24dp"
     android:layout_height="24dp"
-    android:layout_alignParentRight="true"
+    android:layout_alignParentLeft="true"
     android:layout_centerVertical="true"
     android:checked="false"
     android:clickable="false"
@@ -24,7 +25,7 @@
   <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_toLeftOf="@id/btnExpandUserInfo"
+    android:layout_toRightOf="@id/btnExpandUserInfo"
     android:orientation="vertical">
 
     <android.support.v7.widget.AppCompatTextView
@@ -32,11 +33,12 @@
       android:textStyle="bold"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:layout_gravity="left"
+      android:layout_gravity="right"
       android:clickable="false"
+      android:ellipsize="end"
       android:focusable="false"
       android:focusableInTouchMode="false"
-      android:gravity="left|center_vertical"
+      android:gravity="right|center_vertical"
       android:maxLines="1"
       android:text="user name"
       android:textColor="@android:color/primary_text_dark"
@@ -46,11 +48,12 @@
       android:id="@+id/textView_email"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:layout_gravity="left"
+      android:layout_gravity="right"
       android:clickable="false"
+      android:ellipsize="end"
       android:focusable="false"
       android:focusableInTouchMode="false"
-      android:gravity="left|center_vertical"
+      android:gravity="right|center_vertical"
       android:maxLines="1"
       android:text="test.test@domain.com"
       android:textColor="@android:color/secondary_text_dark"

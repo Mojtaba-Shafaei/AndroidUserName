@@ -1,41 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:paddingTop="16dp"
+  android:paddingLeft="16dp"
+  android:paddingRight="16dp"
+  android:background="@android:color/holo_red_light"
+  android:orientation="vertical">
+
+  <com.mojtaba_shafaei.android.userName.NameEmail
+    android:id="@+id/name0"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@android:color/holo_red_light"
-    android:orientation="vertical"
-    android:paddingLeft="16dp"
-    android:paddingRight="16dp"
-    android:paddingTop="16dp">
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_name_mail"
+    app:email="mjtb.shafaei@gmail.come"
+    app:name="Mojtaba Shafaei"/>
 
-    <com.mojtaba_shafaei.android.userName.NameEmail
-        android:id="@+id/name0"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/bg_name_mail"
-        app:email="mjtb.shafaei@gmail.come"
-        app:name="Mojtaba Shafaei" />
+  <com.mojtaba_shafaei.android.userName.NameEmail
+    android:id="@+id/name1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    android:background="@android:color/holo_blue_dark"
+    app:arrow="@drawable/ic_arrow_drop_down_white_24dp"
+    app:email="mjtb.shafaei@gmail.come"
+    app:name="Mojtaba Shafaei"
+    app:name_layout_direction="ltr"/>
 
-    <com.mojtaba_shafaei.android.userName.NameEmail
-        android:id="@+id/name1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:background="@android:color/holo_blue_dark"
-        app:arrow="@drawable/ic_arrow_dark"
-        app:email="mjtb.shafaei@gmail.come"
-        app:name="Mojtaba Shafaei" />
-
-    <com.mojtaba_shafaei.android.userName.NameEmail
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        app:arrow="@android:drawable/arrow_down_float"
-        app:email="mjtb.shafaei@gmail.come"
-        app:emailTextColor="@android:color/secondary_text_light_nodisable"
-        app:name="Mojtaba Shafaei"
-        app:nameTextColor="@android:color/primary_text_light_nodisable" />
+  <com.mojtaba_shafaei.android.userName.NameEmail
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    app:arrow="@android:drawable/arrow_down_float"
+    app:email="mjtb.shafaei@gmail.come"
+    app:emailTextColor="@android:color/secondary_text_light_nodisable"
+    app:name="Mojtaba Shafaei"
+    app:nameTextColor="@android:color/primary_text_light_nodisable"/>
 
 </LinearLayout>
